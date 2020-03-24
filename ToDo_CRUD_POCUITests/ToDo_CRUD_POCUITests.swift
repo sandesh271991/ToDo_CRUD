@@ -23,15 +23,27 @@ class ToDo_CRUD_POCUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+
+    
+    func testTaskSave() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        XCUIApplication().tables.staticTexts["Done"].tap()
     }
 
+    func testTaskAdd() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.navigationBars["ToDo"].buttons["Add"].tap()
+        app.alerts["Add Task"].scrollViews.otherElements.buttons["add"].tap()
+        
+    }
+    
+    
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
@@ -40,4 +52,5 @@ class ToDo_CRUD_POCUITests: XCTestCase {
             }
         }
     }
+
 }

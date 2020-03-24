@@ -24,7 +24,13 @@ class ToDoController: UITableViewController {
         super.viewDidLoad();
         toDoStore = ToDoStore.init()
         tableView.tableFooterView = UIView()
+        
     }
+    
+    func printTimestamp() -> String {
+           let timestamp = DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .short)
+           return timestamp
+       }
     
     @IBAction func addTask(_ sender: UIBarButtonItem) {
         
@@ -34,12 +40,11 @@ class ToDoController: UITableViewController {
             
             guard let name = alertController.textFields?.first?.text else { return }
             
-            let newTask = Task(name: name)
+            let newTask = Task(name: "Title - \(name) Time -  \(self.printTimestamp())")
         
             self.toDoStore?.add(newTask, at: 0)
             let indexPath = IndexPath(row: 0, section: 0)
             self.tableView.insertRows(at: [indexPath], with: .automatic)
-            
         }
         
         addAction.isEnabled = false
