@@ -23,7 +23,6 @@ class ToDoUtility {
         guard let unarchivedData = UserDefaults.standard.object(forKey: key) as? Data else { return nil }
         let task =  try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(unarchivedData) as? [[Task]]
         return task
-        //unarchiveObject(with: unarchivedData) as? [[Task]]
     }
     
     // save

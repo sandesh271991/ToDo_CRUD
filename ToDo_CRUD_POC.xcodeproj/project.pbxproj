@@ -20,6 +20,8 @@
 		021D23BE24291694003CB15A /* ToDoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D23BC24291694003CB15A /* ToDoStore.swift */; };
 		021D23BF24291694003CB15A /* ToDoUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D23BD24291694003CB15A /* ToDoUtility.swift */; };
 		021D23C124292094003CB15A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021D23C024292094003CB15A /* AppConstants.swift */; };
+		02B978472429F6CF00DC4EDD /* ToDoController-Extension+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B978462429F6CF00DC4EDD /* ToDoController-Extension+TableViewDelegate.swift */; };
+		02B978492429F90000DC4EDD /* ToDoController-Extension+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B978482429F90000DC4EDD /* ToDoController-Extension+TableViewDataSource.swift */; };
 		749A9D9D9C83198BED313C1F /* Pods_ToDo_CRUD_POC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD12733459194A44A0CDCC96 /* Pods_ToDo_CRUD_POC.framework */; };
 		EE953DFDB37DA4A08C8FF9D6 /* Pods_ToDo_CRUD_POCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80DBB6C05F31BC3AD51B651 /* Pods_ToDo_CRUD_POCTests.framework */; };
 		EF3117CE085B4B1BC2E53932 /* Pods_ToDo_CRUD_POC_ToDo_CRUD_POCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344A91603C8D0CBDFFBC4477 /* Pods_ToDo_CRUD_POC_ToDo_CRUD_POCUITests.framework */; };
@@ -62,6 +64,8 @@
 		021D23BC24291694003CB15A /* ToDoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoStore.swift; sourceTree = "<group>"; };
 		021D23BD24291694003CB15A /* ToDoUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoUtility.swift; sourceTree = "<group>"; };
 		021D23C024292094003CB15A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		02B978462429F6CF00DC4EDD /* ToDoController-Extension+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoController-Extension+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		02B978482429F90000DC4EDD /* ToDoController-Extension+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoController-Extension+TableViewDataSource.swift"; sourceTree = "<group>"; };
 		344A91603C8D0CBDFFBC4477 /* Pods_ToDo_CRUD_POC_ToDo_CRUD_POCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo_CRUD_POC_ToDo_CRUD_POCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0EE9993DB1FF1F3812C458 /* Pods-ToDo_CRUD_POCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo_CRUD_POCTests.debug.xcconfig"; path = "Target Support Files/Pods-ToDo_CRUD_POCTests/Pods-ToDo_CRUD_POCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86256D5001488D6D16778691 /* Pods-ToDo_CRUD_POCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo_CRUD_POCTests.release.xcconfig"; path = "Target Support Files/Pods-ToDo_CRUD_POCTests/Pods-ToDo_CRUD_POCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				021D23BA24291681003CB15A /* ToDoController.swift */,
+				02B978462429F6CF00DC4EDD /* ToDoController-Extension+TableViewDelegate.swift */,
+				02B978482429F90000DC4EDD /* ToDoController-Extension+TableViewDataSource.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,7 +218,6 @@
 				6A0EE9993DB1FF1F3812C458 /* Pods-ToDo_CRUD_POCTests.debug.xcconfig */,
 				86256D5001488D6D16778691 /* Pods-ToDo_CRUD_POCTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -420,11 +425,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B978472429F6CF00DC4EDD /* ToDoController-Extension+TableViewDelegate.swift in Sources */,
 				021D23B924291675003CB15A /* Task.swift in Sources */,
 				021D23BB24291681003CB15A /* ToDoController.swift in Sources */,
 				021D23BE24291694003CB15A /* ToDoStore.swift in Sources */,
 				021D23BF24291694003CB15A /* ToDoUtility.swift in Sources */,
 				021D23C124292094003CB15A /* AppConstants.swift in Sources */,
+				02B978492429F90000DC4EDD /* ToDoController-Extension+TableViewDataSource.swift in Sources */,
 				02121A142428D65200C87B4A /* AppDelegate.swift in Sources */,
 				02121A162428D65200C87B4A /* SceneDelegate.swift in Sources */,
 			);

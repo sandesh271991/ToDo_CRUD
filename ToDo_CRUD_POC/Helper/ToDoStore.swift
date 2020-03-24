@@ -10,13 +10,13 @@
 import Foundation
 
 class ToDoStore {
+    
     var tasks = [[Task](), [Task]()]
 
     func add(_ task: Task, at index: Int, isDone: Bool = false) {
         let section = isDone ? 1 : 0
         
         tasks[section].insert(task, at: index)
-        
     }
     
     @discardableResult func removeTask(at index: Int, isDone: Bool = false) -> Task {
