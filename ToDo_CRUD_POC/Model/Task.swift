@@ -14,8 +14,8 @@ class Task: NSObject, NSCoding {
     var name: String?
     var isDone: Bool?
     
-    private let nameKey = "name"
-    private let isDoneKey = "isDone"
+    private let nameKey = NAME_KEY
+    private let isDoneKey = IS_DONE_KEY
     
     init(name: String, isDone: Bool = false) {
         self.name = name;

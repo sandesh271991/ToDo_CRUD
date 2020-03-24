@@ -1,0 +1,6 @@
+framework module Pods_ToDo_CRUD_POC_ToDo_CRUD_POCUITests {
+  umbrella header "Pods-ToDo_CRUD_POC-ToDo_CRUD_POCUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

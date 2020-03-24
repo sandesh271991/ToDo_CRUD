@@ -28,9 +28,9 @@ class ToDoController: UITableViewController {
     
     @IBAction func addTask(_ sender: UIBarButtonItem) {
         
-        let alertController = UIAlertController(title: "Add Task", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: ALERT_CONTROLLER_TITLE, message: nil, preferredStyle: .alert)
         
-        let addAction = UIAlertAction(title: "Add", style: .default) {_ in
+        let addAction = UIAlertAction(title: ADD_ACTION, style: .default) {_ in
             
             guard let name = alertController.textFields?.first?.text else { return }
             
@@ -44,10 +44,10 @@ class ToDoController: UITableViewController {
         
         addAction.isEnabled = false
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: CANCEL_ACTION, style: .cancel, handler: nil)
         
         alertController.addTextField { textField in
-            textField.placeholder = "Enter task name..."
+            textField.placeholder = PLACEHOLDER
             textField.addTarget(self, action: #selector(self.handleTextChanged), for: .editingChanged)
         }
         
@@ -86,7 +86,7 @@ extension ToDoController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_IDENTIFIER, for: indexPath)
         cell.textLabel?.text = toDoStore?.tasks[indexPath.section][indexPath.row].name
         
         return cell
